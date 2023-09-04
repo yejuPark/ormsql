@@ -56,4 +56,4 @@ GROUP BY country;
 SELECT country, COUNT(*), AVG(value) FROM movies_user
 JOIN movies_score ON movies_user.id = movies_score.user_id
 GROUP BY country;
--- User.objects.values('country').annotate(Count('id'), Avg('score_value'))
+-- User.objects.values('country').annotate(Count('id'), Avg('score__value'))
